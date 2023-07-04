@@ -1,0 +1,16 @@
+//C program to covert a decimal number to equivalent binary number using  bitwise operators
+
+int d,sum=0,count=0,calcval=0;
+		while(N>0){
+		    d = N % 2;
+		    N/=2;
+		    calcval = (int)Math.pow(10,count)*d;
+		    sum+=calcval;
+		    count++;
+		    
+		}
+		System.out.println(sum);
+
+
+        //you can also solve this using array it will be very much easier than this one.
+		for better understanding go to this link - https://www.geeksforgeeks.org/program-decimal-binary-conversion/

@@ -1,0 +1,45 @@
+wap in c to search a name in a list using binary search techniques.
+
+SOl.
+ #include <stdio.h>
+#include <string.h>
+
+// Function to perform binary search on a sorted list of names
+int binarySearch(char names[], int size, char *search_name) {
+    int left = 0;
+    int right = size - 1;
+    int name_len = strlen(search_name);
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        int compare_result = strncmp(&names[mid * 50], search_name, name_len);
+
+        if (compare_result == 0)
+            return mid; // Found the name at index mid
+        else if (compare_result < 0)
+            left = mid + 1; // Search in the right half
+        else
+            right = mid - 1; // Search in the left half
+    }
+
+    return -1; // Name not found in the list
+}
+
+int main() {
+    char names[] = "Alice\0Bob\0Charlie\0David\0Emma\0Frank\0Grace\0Henry\0Isabella\0Jack\0";
+    int num_names = sizeof(names) / 50; // Each name occupies 50 bytes
+
+    char search_name[50];
+    printf("Enter the name to search: ");
+    scanf("%s", search_name);
+
+    // Perform binary search on the sorted list of names
+    int index = binarySearch(names, num_names, search_name);
+
+    if (index != -1)
+        printf("%s found at index %d.\n", search_name, index);
+    else
+        printf("%s not found in the list.\n", search_name);
+
+    return 0;
+}

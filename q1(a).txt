@@ -1,0 +1,53 @@
+comparing pseudocode with an algorithm for the program factorial of a number
+
+
+first, i would like to explain in brief what these both terminologies are: 
+
+Pseudocode and algorithms are both used to describe
+ the steps or logic of a program or problem-solving process. 
+ However, they differ in terms of their level of detail and formality.
+
+Pseudocode:
+Pseudocode is a high-level, informal description of a program or algorithm. 
+It uses plain language and simple constructs to outline the logic of the solution 
+without being tied to any specific programming language. 
+Pseudocode is often used as a tool for planning and understanding the structure of a program 
+before implementing it in a particular programming language.
+
+Algorithm:
+An algorithm is a step-by-step, precise set of instructions used to solve a specific problem
+ or perform a specific task. It is often written in a more formal and structured manner 
+ than pseudocode and is independent of any programming language syntax. 
+ Algorithms are typically more detailed and specific, providing clear instructions
+  for each step of the process.
+
+  In summary, pseudocode is an informal and high-level description of the logic of a program or algorithm,
+   while an algorithm is a more formal and precise set of instructions.
+    Pseudocode is useful for planning and understanding, 
+    while an algorithm provides a specific and detailed solution to a problem.
+
+    Pseudocode:
+1. Start
+2. Read input number (num)
+3. Set factorial = 1
+4. Set counter = 1
+5. While counter <= num, do the following steps:
+     - Set factorial = factorial * counter
+     - Increment counter by 1
+6. Print factorial
+7. End
+
+
+Algorithm: CalculateFactorial(num)
+1. Start
+2. Input num
+3. Set factorial = 1
+4. Set counter = 1
+5. While counter <= num, do steps 6 and 7:
+6.    Set factorial = factorial * counter
+7.    Increment counter by 1
+8. Return factorial
+9. End
+
+The pseudocode uses plain language and simple constructs to describe the logic,
+ while the algorithm provides a more structured and formal representation of the same steps.

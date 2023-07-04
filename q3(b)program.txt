@@ -1,0 +1,51 @@
+wapin C to check whether a number can be expressed as the sum of two prime.
+INPUT NUMBER: 16
+EXPECTED OUTPUT:
+16 = 1+15  //both are not prime
+16 = 2+14  //2 is prime but 14 is not
+16 = 3+13 //both are prime(so this is the answer).
+16 = 4+12 //both are not prime.
+16 = 5+11 //both are prime(so this is the answer).
+16 = 6+10 //both are not prime
+16 = 7+9 // 7 is prime but 9 is not
+
+SOL.
+
+#include <stdio.h>
+
+
+// Function to check if a number is prime
+bool isPrime(int num) {
+    if (num <= 1)
+        return false;
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0)
+            return false;
+    }
+    return true;
+}
+
+// Function to check if the number can be expressed as the sum of two primes
+bool isSumOfTwoPrimes(int num) {
+    for (int i = 2; i <= num / 2; i++) {
+        if (isPrime(i) && isPrime(num - i))
+            return true;
+    }
+    return false;
+}
+
+int main() {
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    if (isSumOfTwoPrimes(number))
+        printf("%d can be expressed as the sum of two prime numbers.\n", number);
+    else
+        printf("%d cannot be expressed as the sum of two prime numbers.\n", number);
+
+    return 0;
+}
+
+
+/do dry run and you will get it easily 

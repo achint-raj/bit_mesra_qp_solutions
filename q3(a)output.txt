@@ -1,0 +1,28 @@
+how many lines of output does the following C code produce?
+
+
+#include <stdio.h>
+float i = 2.0;
+float j = 1.0;
+float sum = 0.0;
+main(){
+    while(i/j > 0.001){
+        j+=j;
+        sum=sum + (i/j);
+        printf("%f\n",sum);
+    }
+}
+
+ANS.
+1.000000
+1.500000
+1.750000
+1.875000
+1.937500
+1.968750
+1.984375
+1.992188
+1.996094
+1.998047
+1.999023
+so the answer consists of 11 lines.
